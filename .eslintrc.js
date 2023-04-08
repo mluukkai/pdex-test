@@ -35,7 +35,6 @@ module.exports = {
       "off"
     ],
     "semi": [
-      "error",
       "off"
     ],
     "eqeqeq": "error",
