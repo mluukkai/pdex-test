@@ -1,9 +1,8 @@
-# fly.toml file generated for wandering-moon-6543 on 2023-04-08T13:05:25+03:00
+# fly.toml file generated for small-pine-8724 on 2023-04-26T09:37:46+03:00
 
-app = "wandering-moon-6543"
+app = "small-pine-8724"
 kill_signal = "SIGINT"
 kill_timeout = 5
-primary_region = "arn"
 processes = []
 
 [deploy]
@@ -26,7 +25,6 @@ processes = []
   internal_port = 8080
   processes = ["app"]
   protocol = "tcp"
-
   [services.concurrency]
     hard_limit = 25
     soft_limit = 20
@@ -46,6 +44,7 @@ processes = []
     interval = "15s"
     restart_limit = 0
     timeout = "2s"
+
   [[services.http_checks]]
     interval = 10000
     grace_period = "5s"
@@ -56,8 +55,9 @@ processes = []
     timeout = 2000
     tls_skip_verify = false
     [services.http_checks.headers]
+
   [[services.script_checks]]
-    command       = "$HOME/app/health_check.shxxxx"
+    command       = "/app/health_checkxxx.sh"
     grace_period  = "5s"
     interval      = "5s"
     restart_limit = 0
